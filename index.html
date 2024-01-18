@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery.js"></script>
+        <title> Testing Webstite Design - Ard </title>
+    </head>
+    <body>
+        <div>
+            <p>Nomor</p>
+            <input name="Nomor" type="number"></input>
+        </div>
+        <div>
+            <p>Tanggal</p>
+            <input id="Tanggal" type="date"></input>
+        </div>
+        <div>
+            <p>Jam</p>
+            <input id="Jam" type="time"></input>
+        </div>
+        <div>
+            <p>Customer</p>
+            <input name="Customer" type="text"></input>
+        </div>
+        <p>Produk</p>
+        <table id="TabelProduk">
+            <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="Produk-0">
+                    <td><input name="NamaProduk-0" type="text"></input></td>
+                    <td><input name="HargaProduk-0" type="number" value="0" step="1000" min="0"></input></td>
+                    <td><input name="JumlahProduk-0" type="number" value="0" min="1"></input></td>
+                    <td><span name=total-0>0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <p>Total Barang</p>
+            <span id="totalbarang">0</span>
+        </div>
+        <div>
+            <p>Total Harga Barang</p>
+            <span id="totalhargabarang">0</span>
+        </div>
+        <br>
+        <button id="AddProduk">Tambah</button>
+        <br>
+        <br>
+        <div>
+            <p>Alamat Kirim</p>
+            <input name="AlamatKirim" type="text"></input>
+        </div>
+        <br>
+        <div>
+            <input id="ongkirgak" type="checkbox"/><label>Perlu Ongkir?</label>
+        </div>
+        <div id="ongkir">
+            <p>Ongkir</p>
+            <input id="BiayaOngkir" type="number" value="0" step="1000" min="0"></input>
+        </div>
+        <div>
+            <p>Total Keseluruhan</p>
+            <span id="total">0</span>
+        </div>
+        <br>
+        <button id="gen_invoice">Buat Nota</button>
+
+    </body>
+    <script src="process.js"></script>
+</html>
