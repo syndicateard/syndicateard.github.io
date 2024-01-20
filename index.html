@@ -4,34 +4,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="jquery.js"></script>
+        <script src="html2canvas.js"></script>
         <title> Testing Webstite Design - Ard </title>
     </head>
     <body>
-        <div>
+        <div class="inputlabel">
             <p>Nomor</p>
-            <input name="Nomor" type="number"></input>
+            <input id="Nomor" value="1" type="number"></input>
         </div>
-        <div>
+        <div class="inputlabel">
             <p>Tanggal</p>
             <input id="Tanggal" type="date"></input>
         </div>
-        <div>
+        <div class="inputlabel">
             <p>Jam</p>
             <input id="Jam" type="time"></input>
         </div>
-        <div>
+        <div class="inputlabel">
             <p>Customer</p>
-            <input name="Customer" type="text"></input>
+            <input id="Customer" type="text"></input>
         </div>
-        <p>Produk</p>
+        <p class="judultabel">List Barang</p>
         <table id="TabelProduk">
             <thead>
                 <tr>
-                    <th>Nama Produk</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th>Total</th>
-                    <th></th>
+                    <th style="width:40%">Nama Produk</th>
+                    <th style="width:25%">Harga</th>
+                    <th style="width:5%">Jumlah</th>
+                    <th style="width:25%">Total</th>
+                    <th style="width:5%"></th>
                 </tr>
             </thead>
             <tbody>
@@ -43,36 +44,103 @@
                 </tr>
             </tbody>
         </table>
-        <div>
+        <button id="AddProduk">Tambah</button>
+        <div class="inputlabel">
             <p>Total Barang</p>
             <span id="totalbarang">0</span>
         </div>
-        <div>
+        <div class="inputlabel">
             <p>Total Harga Barang</p>
             <span id="totalhargabarang">0</span>
         </div>
-        <br>
-        <button id="AddProduk">Tambah</button>
-        <br>
-        <br>
-        <div>
+        <div class="inputlabel">
             <p>Alamat Kirim</p>
-            <input name="AlamatKirim" type="text"></input>
+            <input id="AlamatKirim" type="text" value="-"></input>
         </div>
-        <br>
-        <div>
-            <input id="ongkirgak" type="checkbox"/><label>Perlu Ongkir?</label>
-        </div>
-        <div id="ongkir">
+        <div class="inputlabel" id="ongkir">
             <p>Ongkir</p>
             <input id="BiayaOngkir" type="number" value="0" step="1000" min="0"></input>
         </div>
-        <div>
+        <div class="inputlabel">
             <p>Total Keseluruhan</p>
             <span id="total">0</span>
         </div>
-        <br>
-        <button id="gen_invoice">Buat Nota</button>
+        <div class="inputcheckbox">
+            <p>Udah bayar ta?</p><input id="udahbayar" type="checkbox"/>
+        </div>
+
+        <div id="print-content">
+            <div class="p_header">
+                <img class="p_logo" src="images/logo.jpg">
+                <div class="p_nomorhp">082337388051</div>
+            </div>
+            <div class="p_isiatas">
+                <div class="p_waktu">
+                    <div id="pid_date">15 Jan 2024</div>
+                    <div id="pid_time">21:33</div>
+                </div>
+                <div class="p_nomorurut" id="pid_nomor"></div>
+            </div>
+            <div class="p_namacustomer" id="pid_namacust">Fendi Ardana Riadi</div>
+            <div class="p_line1"></div>
+            <ul class="p_isitengah" id="pid_produk">
+                <!-- <li>
+                    <div class="p_namaproduk">Cireng Ayam Mayo isi 5</div>
+                    <div class="p_isiproduk">
+                        <div>1x 15.000</div>
+                        <div>15.000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="p_namaproduk">Cireng Keju isi 2</div>
+                    <div class="p_isiproduk">
+                        <div>1x 12.000</div>
+                        <div>12.000</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="p_namaproduk">Cireng jando</div>
+                    <div class="p_isiproduk">
+                        <div>1x 23.000</div>
+                        <div>23.000</div>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="p_line1"></div>
+            <div class="p_isibawah">
+                <div id="pid_totalitem">Total - 3 Item</div>
+                <div id="pid_totalhargaproduk">Rp 50.000</div>
+            </div>
+            <div class="p_line1"></div>
+            <div class="p_isiongkir">
+                <div>Ongkir</div>
+                <div id="pid_ongkir">0</div>
+            </div>
+            <div class="p_alamattujuan" id="pid_alamat"><strong>Alamat Tujuan :</strong>
+                -
+            </div>
+            <div class="p_line1"></div>
+            <div class="p_isitotal">
+                <div id="pid_totalitembawah">Total - 3 Item</div>
+                <div id="pid_total">Rp 1.260.000</div>
+            </div>
+            <div class="p_Apasudahdibayar" id="pid_sudahbayar">Belum Dibayar</div>
+            <div class="p_footer">
+                <div>Rek. BNI</div>
+                <div>132002323232323</div>
+                <div><strong>Maria Ulpa</strong></div>
+                <br>
+                <div>Hatur Nuhun</div>
+            </div>
+        </div>
+        <input id="btn-Preview-Image" type="button" value="Preview"/>
+        <input id="btn-Convert-Html2Image" type="button" value="Download" href="#"></input>
+        <br/>
+        <br/>
+        <h3>Preview :</h3>
+        <div id="previewImage">
+
+        </div>
 
     </body>
     <script src="process.js"></script>
