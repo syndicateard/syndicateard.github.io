@@ -120,7 +120,7 @@ function varToPrintContent(){
         const namaForRow = rows[i].getElementsByTagName('input')[0].value;
         const HargaForRow=  parseInt(rows[i].getElementsByTagName('input')[1].value);
         const jumlahForRow=  parseInt(rows[i].getElementsByTagName('input')[2].value);
-        const totalForRow=  parseInt(rows[i].getElementsByTagName('span')[0].innerHTML);
+        const totalForRow=  "Rp " + rupiah(parseInt(rows[i].getElementsByTagName('span')[0].innerHTML));
 
         $("#pid_produk").append(
             `<li>
@@ -134,11 +134,11 @@ function varToPrintContent(){
     }
 
     $("#pid_totalitem").html("Total - " + $("#totalbarang").html() + " Item");
-    $("#pid_totalhargaproduk").html($("#totalhargabarang").html());
-    $("#pid_ongkir").html($("#BiayaOngkir").val());
+    $("#pid_totalhargaproduk").html("Rp " + rupiah($("#totalhargabarang").html()));
+    $("#pid_ongkir").html("Rp " + rupiah($("#BiayaOngkir").val()));
     $("#pid_alamat").html("<strong>Alamat Tujuan : </strong>" + $("#AlamatKirim").val());
     $("#pid_totalitembawah").html("Total - " + $("#totalbarang").html() + " Item");
-    $("#pid_total").html($("#total").html());
+    $("#pid_total").html("Rp " + rupiah($("#total").html()) + ",00");
     $("#pid_sudahbayar").html($("#udahbayar").val());
 
     if ($('#udahbayar').is(":checked"))
@@ -203,3 +203,23 @@ $("#BiayaOngkir").change(function(){
     biayaongkir = parseInt($("#BiayaOngkir").val());
     changeAllValHarga();
 });
+
+// const ong = new AutoNumeric('#BiayaOngkir', {
+//     decimalCharacter: ",",
+//     decimalPlaces: '2',
+//     digitGRoupSeparator : '.',
+//     minimumValue: "0",
+// });
+
+// const autoNumericOptions = {
+//     decimalCharacter: ",",
+//     decimalPlaces: '2',
+//     digitGRoupSeparator : '.',
+//     minimumValue: "0",
+//   };
+// AutoNumeric.multiple(".rupiah",null, autoNumericOptions); 
+
+
+function rupiah(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

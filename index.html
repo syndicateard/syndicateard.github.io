@@ -5,9 +5,11 @@
         <link rel="stylesheet" href="style.css">
         <script src="jquery.js"></script>
         <script src="html2canvas.js"></script>
-        <title> Testing Webstite Design - Ard </title>
+        <script src="autoNumericmin.js"></script>
+        <title>Titip Marinceu - Nota Generator</title>
     </head>
     <body>
+        <div class="JudulAtas">Titip Marinceu Nota</div>
         <div class="inputlabel">
             <p>Nomor</p>
             <input id="Nomor" value="1" type="number"></input>
@@ -55,11 +57,13 @@
         </div>
         <div class="inputlabel">
             <p>Alamat Kirim</p>
-            <input id="AlamatKirim" type="text" value="-"></input>
+
+            <textarea id="AlamatKirim"></textarea>
+            <!-- <input id="AlamatKirim" type="text" value="-"></input> -->
         </div>
         <div class="inputlabel" id="ongkir">
             <p>Ongkir</p>
-            <input id="BiayaOngkir" type="number" value="0" step="1000" min="0"></input>
+            <input id="BiayaOngkir" type="text" value="0" step="1000" min="0"></input>
         </div>
         <div class="inputlabel">
             <p>Total Keseluruhan</p>
@@ -133,8 +137,8 @@
                 <div>Hatur Nuhun</div>
             </div>
         </div>
-        <input id="btn-Preview-Image" type="button" value="Preview"/>
-        <input id="btn-Convert-Html2Image" type="button" value="Download" href="#"></input>
+        <input id="btn-Preview-Image" type="button" value="Lihat Dulu"/>
+        <input id="btn-Convert-Html2Image" type="button" value="Download Gambar" href="#"></input>
         <br/>
         <br/>
         <h3>Preview :</h3>
