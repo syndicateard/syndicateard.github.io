@@ -176,7 +176,7 @@ $(document).ready(function(){
         varToPrintContent();
         html2canvas(document.querySelector("#print-content")).then(canvas => {
             console.log(canvas.width);
-            setDPI(canvas, 288);
+            setDPI(canvas, 480);
             console.log(canvas.width);
             $("#previewImage").html(canvas);
             getCanvas = canvas;

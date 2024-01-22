@@ -139,6 +139,7 @@ span{
 }
 
 #print-content{
+    width: 390px;
     background-color: rgb(255, 255, 255);
     padding: 40px 0px;
     display: none;
