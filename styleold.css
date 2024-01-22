@@ -255,3 +255,266 @@ ul.p_isitengah {
     margin-top: 50px;
     font-size: 20px;
 }
+
+
+
+///////////////////////////////////////////////////
+
+html { 
+    font-family: Helvetica; 
+    text-align: center;
+    font-size: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 4px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+textarea:focus, input[type=text]:focus, input[type=number]:focus {
+    border: 2px solid #005991;
+    background-color: rgb(235, 250, 255);
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: inherit;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* font-size: inherit; */
+  }
+
+input[type=checkbox] {
+    width: 10%;
+    padding: 0px 0px;
+    box-sizing: border-box;
+}
+
+.inputcheckbox{
+    display: flex;
+    margin: 0px 15px;
+}
+
+.inputcheckbox p{
+    width: 30%;
+    text-align: left;
+}
+
+.inputlabel{
+    display: flex;
+    margin: 0px 15px;
+    justify-content: space-between;
+}
+
+.JudulAtas{
+    margin: 15px 00px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.inputlabel p{
+    width: 40%;
+    text-align: left;
+}
+
+.judultabel{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 15px 20px;
+    border-bottom: 1.5px dashed #949494;
+}
+
+th{
+    font-weight: 400;
+    text-align: left;
+}
+
+th:nth-child(4){
+    text-align: center;
+}
+
+#AddProduk{
+    width: calc(100% - 30px);
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    margin: 4px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btn-Preview-Image{
+    width: calc(100% - 30px);
+    background-color: #036aa8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+
+#btn-Convert-Html2Image{
+    width: calc(100% - 30px);
+    background-color: #036aa8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+
+.remProduk{
+    width: 100%;
+    background-color: #db3737;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 4px 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table{
+    width: calc(100% - 30px);
+    margin: 0px 15px;
+}
+
+span{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#print-content{
+    width: 490px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 0px;
+    display: none;
+}
+
+.p_logo{
+    width: 200px;
+}
+
+.p_header{
+    display: inline-block;
+    font-size: larger;
+    width: 100%;
+    margin: 20px 0px;
+    margin-top: 10px;
+}
+
+.p_nomorhp{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.p_isiatas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_waktu{
+    display: flex;
+    font-size: 20px;
+}
+.p_waktu > div {
+    margin-left: 20px;
+}
+
+.p_nomorurut{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.p_namacustomer{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 26px;
+}
+
+.p_line1{
+    border-top: 2px dashed #036aa8;
+    margin: 10px 20px;
+}
+
+/* hr{
+    border-top: 2px solid #036aa8;
+    margin: 10px 20px;
+} */
+
+ul.p_isitengah {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.p_namaproduk{
+    font-size: 20px;
+    text-align: left;
+    margin: 10px 10px;
+    font-weight: bold;
+}
+
+.p_isiproduk{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    margin-left: 30px;
+}
+
+.p_isibawah{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p_isiongkir{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.p_alamattujuan{
+    margin: 0px 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.p_isitotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.p_Apasudahdibayar{
+    text-align: right;
+    margin: -5px 20px;
+}
+
+.p_footer{
+    margin: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+}
