@@ -518,3 +518,121 @@ ul.p_isitengah {
     margin-top: 50px;
     font-size: 20px;
 }
+
+
+////////////////////////////////////
+
+.p_logo{
+    width: 150px;
+}
+
+.p_header{
+    display: inline-block;
+    font-size: 18px;
+    width: 100%;
+    margin: 30px 0px;
+    margin-top: 10px;
+}
+
+.p_nomorhp{
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.p_isiatas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_waktu{
+    display: flex;
+    font-size: 16px;
+}
+.p_waktu > div {
+    margin-left: 20px;
+}
+
+.p_nomorurut{
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.p_namacustomer{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.p_line1{
+    border-top: 1.5px dashed #036aa8;
+    margin: 10px 20px;
+}
+
+/* hr{
+    border-top: 2px solid #036aa8;
+    margin: 10px 20px;
+} */
+
+ul.p_isitengah {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.p_namaproduk{
+    font-size: 16px;
+    text-align: left;
+    margin: 10px 10px;
+    font-weight: bold;
+}
+
+.p_isiproduk{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+    margin-left: 30px;
+}
+
+.p_isibawah{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.p_isiongkir{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 16px;
+}
+
+.p_alamattujuan{
+    margin: 0px 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.p_isitotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p_Apasudahdibayar{
+    text-align: right;
+    margin: -5px 20px;
+    font-size: 13px;
+}
+
+.p_footer{
+    margin: 20px;
+    margin-top: 50px;
+    font-size: 16px;
+}
