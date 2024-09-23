@@ -52,7 +52,7 @@ function changeAllValHarga() {
     const jumlahForRow = parseInt(
       rows[i].getElementsByTagName("input")[2].value
     );
-    TotalBarang += jumlahForRow;
+    TotalBarang = rows.length;
 
     const totalForRow = parseInt(
       rows[i].getElementsByTagName("span")[0].innerHTML
